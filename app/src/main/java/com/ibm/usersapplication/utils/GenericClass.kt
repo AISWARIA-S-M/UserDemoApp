@@ -26,6 +26,7 @@ class GenericClass {
     }
     var service: RetrofitApi = RetrofitInstance.builder.create(RetrofitApi::class.java)
 
+
 //
 //    fun getResponse() : LiveData<UserDetails> {
 //        val data = MutableLiveData<UserDetails>()

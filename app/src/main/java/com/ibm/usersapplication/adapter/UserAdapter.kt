@@ -54,6 +54,3 @@ class UserAdapter(
     }
 
 }
-fun getuser(){
-
-}

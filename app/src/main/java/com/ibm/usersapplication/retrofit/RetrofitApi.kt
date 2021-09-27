@@ -8,5 +8,4 @@ interface RetrofitApi {
     @GET("5a79cf501c61ea681548")
     fun getUserList(): Call<UserDetails>
 
-
 }

@@ -76,6 +76,7 @@ class Cardfragment : Fragment() {
                 Log.i("data", "Sorry!!!")
             }
         })
+
         viewModel.errorMessage.observe(viewLifecycleOwner, {
             Toast.makeText(UserDetailsInfo.mInstance, it, Toast.LENGTH_SHORT).show()
         })

@@ -61,5 +61,4 @@ object RetrofitInstance {
             )
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
 }
