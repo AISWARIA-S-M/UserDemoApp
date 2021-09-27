@@ -26,32 +26,32 @@ class GenericClass {
     }
     var service: RetrofitApi = RetrofitInstance.builder.create(RetrofitApi::class.java)
 
-
-    fun getResponse() : LiveData<UserDetails> {
-        val data = MutableLiveData<UserDetails>()
-        service.getUserList().enqueue(object : Callback<UserDetails> {
-
-    override fun onResponse(
-            call: Call<UserDetails>, response: Response<UserDetails>
-            ){
-                if(response.code()==200){
-                    data.postValue(response.body())
-                    Toast.makeText(UserDetailsInfo.mInstance,"Success!!!",Toast.LENGTH_LONG).show()
-              }
-               else if(response.isSuccessful && response.body()==null){
-                    Toast.makeText(UserDetailsInfo.mInstance,"No data available",Toast.LENGTH_LONG).show()
-                }
-                else{
-                  Toast.makeText(UserDetailsInfo.mInstance,"Sorry! Something went wrong!",Toast.LENGTH_LONG).show()
-              }
-                val udata = response.body()
-                Log.d("data1",udata?.users.toString())
-            }
-        override fun onFailure(call: Call<UserDetails>, t: Throwable) {
-                Toast.makeText(UserDetailsInfo.mInstance,"Hmm.. Can't reach the page",Toast.LENGTH_LONG).show()
-                Log.d("onFailure", t.toString())
-            }
-        })
-        return data
-    }
+//
+//    fun getResponse() : LiveData<UserDetails> {
+//        val data = MutableLiveData<UserDetails>()
+//        service.getUserList().enqueue(object : Callback<UserDetails> {
+//
+//    override fun onResponse(
+//            call: Call<UserDetails>, response: Response<UserDetails>
+//            ){
+//                if(response.code()==200){
+//                    data.postValue(response.body())
+//                    Toast.makeText(UserDetailsInfo.mInstance,"Success!!!",Toast.LENGTH_LONG).show()
+//              }
+//               else if(response.isSuccessful && response.body()==null){
+//                    Toast.makeText(UserDetailsInfo.mInstance,"No data available",Toast.LENGTH_LONG).show()
+//                }
+//                else{
+//                  Toast.makeText(UserDetailsInfo.mInstance,"Sorry! Something went wrong!",Toast.LENGTH_LONG).show()
+//              }
+//                val udata = response.body()
+//                Log.d("data1",udata?.users.toString())
+//            }
+//        override fun onFailure(call: Call<UserDetails>, t: Throwable) {
+//                Toast.makeText(UserDetailsInfo.mInstance,"Hmm.. Can't reach the page",Toast.LENGTH_LONG).show()
+//                Log.d("onFailure", t.toString())
+//            }
+//        })
+//        return data
+//    }
 }

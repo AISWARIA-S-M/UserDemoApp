@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit
 
 
 object RetrofitInstance {
+
     private const val baseUrl = "https://api.npoint.io/"
     private var interceptor = run {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
@@ -60,4 +61,5 @@ object RetrofitInstance {
             )
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+
 }

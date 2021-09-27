@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface RetrofitApi {
-    @GET("5a79cf501c61ea681548123")
+    @GET("5a79cf501c61ea681548")
     fun getUserList(): Call<UserDetails>
 
 
